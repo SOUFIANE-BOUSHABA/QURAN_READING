@@ -1,0 +1,68 @@
+.sticky-header {
+  position: sticky;
+  top: 0;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 1000;
+}
+.sticky-header.scrolled {
+  background-color: white;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sticky-header.scrolled a {
+  color: black;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: 0.4s;
+}
+.change .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+.sidepanel {
+    display:grid;
+    width: 0;
+    text-align: right;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    padding-bottom: 360px;
+    
+}
+
+.sidepanel a:hover {
+  color: white;
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+@media (max-width: 800px) {
+  .menu-icon {
+    display: block;
+  }
+  .desktop-menu {
+    display: none;
+  }
+}
