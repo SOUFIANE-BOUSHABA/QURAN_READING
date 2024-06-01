@@ -23,7 +23,7 @@ const Hero = () => {
         alt="Quran Image"
         width={600}
         height={400}
-        quality={100}
+        sizes="(max-width: 600px) 100vw, 600px"
         priority 
       />
     </section>

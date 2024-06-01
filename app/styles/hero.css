@@ -1,5 +1,8 @@
 /* app/styles/hero.css */
 
+section{
+    height: 100vh;
+}
 .heroImage {
     margin-top: -450px;
     position: relative;
