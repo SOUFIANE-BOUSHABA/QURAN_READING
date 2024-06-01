@@ -1,0 +1,30 @@
+/* app/styles/hero.css */
+
+.heroImage {
+    margin-top: -450px;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .heroContent {
+    margin-top: -70px;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .bg-slate-900 {
+    background: #070707;
+  }
+  
+  .from-slate-900 {
+    background: #111315;
+  }
+
+@media (max-width: 1000px) {
+  .heroImage {
+   display: none;
+  }
+
+}

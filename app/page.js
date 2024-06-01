@@ -1,16 +1,13 @@
 // app/page.js
 import Layout from './layouts/layout';
-
+import Hero from './components/home/hero';
 
 const HomePage = () => {
  
 
   return (
     <Layout>
-      <div className="p-4">
-        <h2 className="text-xl">Welcome to the Quran Reading App</h2>
-       
-      </div>
+      <Hero />
     </Layout>
   );
 }
