@@ -1,0 +1,10 @@
+/* Add this CSS to your stylesheet or in a style tag */
+.scroll-section-inner {
+    display: flex;
+    gap: 16px; /* Separation between the cards */
+  }
+  
+  .scroll-section-inner > div {
+    flex: 0 0 calc(33.333% - 16px); /* Three cards per view with gap */
+  }
+  
