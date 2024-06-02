@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/gsap": "^3.0.0",
+    "framer-motion": "^11.2.10",
+    "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "next": "14.2.3",
     "react": "^18",
@@ -17,6 +20,8 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
+    "@types/node": "20.13.0",
+    "@types/react": "18.3.3",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
