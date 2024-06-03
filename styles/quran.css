@@ -1,0 +1,17 @@
+section{
+    min-height: 100vh;
+    color: white;
+}
+.slick-carousel{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+ 
+
+  .slick-carousel .carousel-item img {
+    margin-left: 5%;
+   width: 90%;
+   height: 90%;
+   border-radius: 10px;
+  }
