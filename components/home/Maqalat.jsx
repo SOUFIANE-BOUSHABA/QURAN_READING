@@ -94,7 +94,7 @@ function ScrollSection() {
   }, []);
 
   return (
-    <section className="scroll-section-outer mx-auto container text-center">
+    <section className="scroll-section-outer mx-auto container text-center z-[20]">
          <h1 className="text-3xl font-semibold text-white">مقالاتنا الأخيرة</h1>
       <div ref={triggerRef}>
         <div ref={sectionRef} className=" container mx-auto scroll-section-inner">

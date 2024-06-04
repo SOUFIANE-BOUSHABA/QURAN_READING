@@ -3,7 +3,7 @@ import React from 'react';
 
 const Galery = () => {
     return (
-        <section className="ezy__portfolio9_2oxF4Ulm py-14 md:py-24 text-white index-10">
+        <section className="ezy__portfolio9_2oxF4Ulm py-14 md:py-24 text-white z-[20]">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-12 gap-6 lg:gap-12">
                     <div className="col-span-12 md:col-span-4 md:mt-6 lg:mt-12 md:pt-6 lg:pt-12">
