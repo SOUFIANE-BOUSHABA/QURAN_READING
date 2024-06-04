@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "aos": "^2.3.4",
+    "axios": "^1.7.2",
     "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "next": "13.5.6",
