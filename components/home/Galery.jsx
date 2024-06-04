@@ -1,7 +1,12 @@
-import React from 'react';
-// import '../../styles/scroll.css';
+'use client';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Galery = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1200 });
+    }, []);
     return (
         <section className="ezy__portfolio9_2oxF4Ulm py-14 md:py-24 text-white z-[20]">
             <div className="container mx-auto px-4">
@@ -13,7 +18,7 @@ const Galery = () => {
                                 <p className="text-lg leading-8 mb-2">
                                     اكتشف مجموعة من الأعمال الفنية الإسلامية المذهلة، التي تجمع بين التراث والثقافة.
                                 </p>
-                                <div className="col-span-12 mt-6">
+                                <div className="col-span-12 mt-6"        data-aos="fade-up">
                                     <button className="m-1 bg-blue-600 text-white rounded px-3 py-1.5">الكل</button>
                                     <button className="m-1 hover:bg-blue-600 hover:text-white rounded transition duration-300 px-3 py-1.5">
                                         خط عربي
@@ -27,7 +32,7 @@ const Galery = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6 "        data-aos="fade-up">
                             <img
                                 src="OIG1 (1).jpg"
                                 alt="عمل فني إسلامي"
@@ -38,7 +43,7 @@ const Galery = () => {
                                 <p className="mb-0">لوحة فنية رائعة</p>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6 "        data-aos="fade-up">
                             <img
                                 src="OIG1 (2).jpg"
                                 alt="فن الخط العربي"
@@ -51,7 +56,7 @@ const Galery = () => {
                         </div>
                     </div>
                     <div className="col-span-12 md:col-span-4 md:mt-6 md:pt-6 lg:mt-12 lg:pt-12">
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG1.i4xK.CINunN_d2.jpg"
                                 alt="تصميم زخرفي"
@@ -62,7 +67,7 @@ const Galery = () => {
                                 <p className="mb-0">تصميم متقن</p>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG4 (2).jpg"
                                 alt="فن إسلامي"
@@ -73,7 +78,7 @@ const Galery = () => {
                                 <p className="mb-0">جماليات الفن الإسلامي</p>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG1.jpg"
                                 alt="تصميم زخرفي"
@@ -86,7 +91,7 @@ const Galery = () => {
                         </div>
                     </div>
                     <div className="col-span-12 md:col-span-4">
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG2.jpg"
                                 alt="لوحة إسلامية"
@@ -97,7 +102,7 @@ const Galery = () => {
                                 <p className="mb-0">لوحة بديعة</p>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG4 (1).jpg"
                                 alt="خط عربي"
@@ -108,7 +113,7 @@ const Galery = () => {
                                 <p className="mb-0">جماليات الخط</p>
                             </div>
                         </div>
-                        <div className="group rounded-xl overflow-hidden relative mt-6">
+                        <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
                             <img
                                 src="OIG4.jpg"
                                 alt="فن الزخرفة"

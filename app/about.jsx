@@ -1,5 +1,7 @@
 
-import Hero from "@/components/home/Hero";
+import Hero from "@/components/main/Hero";
+import Projects from "@/components/main/Projects";
+// import QuranSection from "@/components/home/QuranSection";
 import QuranSection from "@/components/home/QuranSection";
 import Maqalat from "@/components/home/Maqalat";
 import Galery from "@/components/home/Galery";
@@ -13,6 +15,7 @@ export default function Home() {
         <QuranSection />
         <Maqalat />
         <Galery />
+        <Projects />
       </div>
     </main>
   );
