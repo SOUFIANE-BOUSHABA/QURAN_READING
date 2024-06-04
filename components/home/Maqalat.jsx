@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import '../../styles/scroll.css';
 import { SparklesIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 const mockData = [
   {
     image: "1 (1).jpg",
@@ -11,7 +12,7 @@ const mockData = [
     title: "تفسير سورة الفاتحة",
     description: "تفسير شامل لسورة الفاتحة مع الشرح. يتناول الموضوع بأسلوب سهل ومبسط لجميع المستويات. إضافة إلى ذلك، يحتوي على فصول متعددة تتناول الجوانب المختلفة للسورة.",
     author: "الدكتور محمد",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (1).png",
@@ -19,7 +20,7 @@ const mockData = [
     title: "فقه الصيام",
     description: "أحكام الصيام وشروطه في الإسلام. يشرح هذا الموضوع بالتفصيل كل ما يتعلق بالصيام. كما يتناول القضايا الفقهية المعاصرة المتعلقة بالصيام.",
     author: "الشيخ عبد الله",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (2).png",
@@ -27,7 +28,7 @@ const mockData = [
     title: "شرح الأربعين النووية",
     description: "شرح لأحاديث الأربعين النووية. يقدم هذا الشرح تفصيلات دقيقة للأحاديث النبوية. بالإضافة إلى ذلك، يتضمن توضيحات للمصطلحات والمفاهيم.",
     author: "الأستاذ أحمد",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (3).png",
@@ -35,7 +36,7 @@ const mockData = [
     title: "تلاوة سورة البقرة",
     description: "تلاوة جميلة لسورة البقرة. تلاوة بصوت عذب ومؤثر تساعد على الخشوع. تتضمن أيضا تفسير مبسط للآيات لتسهيل الفهم.",
     author: "القارئ يوسف",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (4).png",
@@ -43,7 +44,7 @@ const mockData = [
     title: "سيرة الرسول",
     description: "سيرة النبي محمد صلى الله عليه وسلم. هذا الكتاب يتناول حياة الرسول بالتفصيل. كما يسلط الضوء على الأحداث الهامة والدروس المستفادة منها.",
     author: "الدكتور خالد",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (1).jpg",
@@ -51,7 +52,7 @@ const mockData = [
     title: "أخلاق المسلم",
     description: "أهمية الأخلاق في حياة المسلم. يشرح هذا الكتاب القيم الإسلامية وأهمية التحلي بالأخلاق الحميدة. كما يتناول كيفية تطبيق هذه القيم في الحياة اليومية.",
     author: "الشيخ سعيد",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   },
   {
     image: "1 (2).png",
@@ -59,7 +60,7 @@ const mockData = [
     title: "أهمية الصلاة",
     description: "شرح أهمية الصلاة في الإسلام. هذا الموضوع يتناول فضائل الصلاة وكيفية أدائها بالشكل الصحيح. بالإضافة إلى ذلك، يناقش كيفية المحافظة على الخشوع أثناء الصلاة.",
     author: "الأستاذة ليلى",
-    authorImage: "https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
+    authorImage: "/media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_400_400/0/1715358724178?e=1723075200&v=beta&t=javYzWaDIR13XZ7F5nOXXunn9qTlOr0KoJcd-5UeaKw"
   }
 ];
 
@@ -111,10 +112,12 @@ function ScrollSection() {
                 >
                     <i className="fas fa-play ml-1"></i>
                 </div>
-                <img
-                src={item.image}
+                <Image
+                src={'/'+item.image}
                 className="w-full"
                 alt={item.title}
+                width={300}
+                height={200}
                 />
                 </div>
                 <div className="p-4 pb-4">
@@ -133,10 +136,10 @@ function ScrollSection() {
                     <div className="flex items-center">
                     <div className="mr-2">
                         <img
-                        src={item.authorImage}
+                        src={'https:/'+item.authorImage}
                         alt=""
                         className="max-w-full h-auto rounded-full border border-btnBorder"
-                        width="40"
+                           width={40}
                         />
                     </div>
                     <div>

@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from 'next/image';
 
 const Galery = () => {
     useEffect(() => {
@@ -33,8 +34,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6 "        data-aos="fade-up">
-                            <img
-                                src="OIG1 (1).jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG1 (1).jpg"
                                 alt="عمل فني إسلامي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -44,8 +47,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6 "        data-aos="fade-up">
-                            <img
-                                src="OIG1 (2).jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG1 (2).jpg"
                                 alt="فن الخط العربي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -57,8 +62,10 @@ const Galery = () => {
                     </div>
                     <div className="col-span-12 md:col-span-4 md:mt-6 md:pt-6 lg:mt-12 lg:pt-12">
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG1.i4xK.CINunN_d2.jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG1.i4xK.CINunN_d2.jpg"
                                 alt="تصميم زخرفي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -68,8 +75,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG4 (2).jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG4 (2).jpg"
                                 alt="فن إسلامي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -79,8 +88,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG1.jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG1.jpg"
                                 alt="تصميم زخرفي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -92,8 +103,10 @@ const Galery = () => {
                     </div>
                     <div className="col-span-12 md:col-span-4">
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG2.jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG2.jpg"
                                 alt="لوحة إسلامية"
                                 className="max-w-full h-auto w-full"
                             />
@@ -103,8 +116,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG4 (1).jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG4 (1).jpg"
                                 alt="خط عربي"
                                 className="max-w-full h-auto w-full"
                             />
@@ -114,8 +129,10 @@ const Galery = () => {
                             </div>
                         </div>
                         <div className="group rounded-xl overflow-hidden relative mt-6"        data-aos="fade-up">
-                            <img
-                                src="OIG4.jpg"
+                            <Image
+                                width={300}
+                                height={200}
+                                src="/OIG4.jpg"
                                 alt="فن الزخرفة"
                                 className="max-w-full h-auto w-full"
                             />
