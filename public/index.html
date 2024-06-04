@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قراءة القرآن</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+  
+      .heroImage {
+       margin-top: -450px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .heroContent {
+       margin-top: -70px;
+
+        position: relative;
+        z-index: 100;
+      }
+
+      .bg-slate-900 {
+        background: #070707;
+      }
+
+      .from-slate-900 {
+        background: #111315;
+      }
+
+      .sticky-header {
+        position: sticky;
+        top: 0;
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 1000;
+      }
+
+      .sticky-header.scrolled {
+        background-color: white;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .sticky-header.scrolled a {
+        color: black;
+      }
+
+      .menu-icon {
+        display: none;
+        cursor: pointer;
+      }
+
+      .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: 0.4s;
+        
+      }
+
+      .change .bar1 {
+        transform: translate(0, 8px) rotate(-45deg);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        transform: translate(0, -8px) rotate(45deg);
+      }
+
+      .sidepanel {
+        width: 0;
+        position: fixed;
+        z-index: 1000;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidepanel a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+      }
+
+      @media (max-width: 800px) {
+        .menu-icon {
+          display: block;
+        }
+
+        .desktop-menu {
+          display: none;
+        }
+
+      }
+
+      .slick-carousel{
+        display: flex;
+        gap: 1rem;
+      }
+
+      .slick-carousel .carousel-item img {
+       width: 100%;
+       height: 100%;
+       border-radius: 10px;
+      }
+      .btn:hover {
+        background-color: #ca8a04;
+      }
+
+      .testtt{
+        max-width: 260px;
+      }
+    </style>
+</head>
+<body class="font-sans text-gray-900 leading-normal">
+
+  <!-- Header -->
+  <header id="header" class=" text-white py-4 sticky-header">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center">
+        <img src="logo.png" class="w-12 h-12" alt="">
+        <h1 class="text-xl font-semibold ml-2">قراءة القرآن</h1>
+      </div>
+      <nav class="desktop-menu">
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-gray-300">الصفحة الرئيسية</a></li>
+          <li><a href="#" class="hover:text-gray-300">حول</a></li>
+          <li><a href="#" class="hover:text-gray-300">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon" onclick="toggleMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">الصفحة الرئيسية</a>
+    <a href="#">حول</a>
+    <a href="#">اتصل بنا</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class=" text-white py-20">
+    <div class="container heroContent mx-auto text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-8">قراءة القرآن</h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-8">مرحبًا بكم في موقعنا لقراءة وتفسير القرآن الكريم بسهولة ويسر.</p>
+      <a href="#" class="bg-white text-blue-900 hover:bg-blue-100 py-2 px-6 rounded-full inline-block font-semibold uppercase tracking-wide transition duration-300">ابدأ القراءة الآن</a>
+    </div>
+    <!-- <img src="Qurankarim.png" class="heroImage mx-auto w-5/6" alt="Quran Image"> -->
+    <img src="pixelcut-export.jpeg" class="heroImage mx-auto w-full" alt="Quran Image">
+
+    
+  </section>
+
+  <section class="py-20 overflow-hidden">
+    
+    <div class="container mx-auto">
+      <article class="text-center">
+        <h2 class="text-3xl  font-bold mb-8">ما هو القرآن الكريم؟</h2>
+        <p class="text-lg mb-4">القرآن الكريم هو الكتاب المقدس لدى المسلمين، وهو الكتاب الوحيد الذي لم يتغير منذ أن نزل على النبي محمد صلى الله عليه وسلم.</p>
+        <p class="text-lg mb-8">يتكون القرآن الكريم من 114 سورة، وكل سورة تتكون من آيات تحتوي على العديد من الأحكام والقصص والعبر.</p>
+      </article>
+      
+
+      <!-- Slick Carousel -->
+      <div id="carousel" class="slick-carousel ">
+        <div class="carousel-item mr-2"><img src="OIG3.jpg" alt="Image 1"></div>
+        <div class="carousel-item mr-2"><img src="OIG3.Ovs3IKtkcn26.jpg" alt="Image 2"></div>
+        <div class="carousel-item mr-2"><img src="OIG1 (3).jpg" alt="Image 3"></div>
+        <div class="carousel-item mr-2"><img src="OIG1 (4).jpg" alt="Image 4"></div>
+        <div class="carousel-item mr-2"><img src="OIG1.2zNm.uv_Z9TpwT42GS.jpg" alt="Image 5"></div>
+        <div class="carousel-item mr-2"><img src="OIG3 (1).jpg" alt="Image 6"></div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+
+  <section
+  class="ezy__comingsoon3_cyML2AJM relative bg-white dark:bg-[#0b1727] dark:text-white py-[60px] md:pt-0 md:pb-[100px] z-[1]"
+>
+  <svg
+    class="text-[#fef2fb] dark:text-[#1E2735] absolute left-0 top-0 hidden sm:block -z-[1]"
+    width="370"
+    height="534"
+    viewBox="0 0 370 534"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="0.5" cy="164.5" r="369.5" fill="gray" fill-opacity="0.1" />
+  </svg>
+<svg
+  class="text-[#fef2fb] dark:text-[#1E2735] absolute right-0 bottom-0 hidden sm:block -z-[1]"
+  width="344"
+  height="470"
+  viewBox="0 0 344 470"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="369.5" cy="369.5" r="369.5" fill="gray" fill-opacity="0.1" />
+</svg>
+  <div class="container mx-auto px-16 md:px-8 lg:px-28">
+    <div class="grid grid-cols-12 justify-between">
+      <div class="col-span-12 lg:col-span-5 flex flex-col justify-center text-center lg:text-start">
+        <h2 class="font-bold text-3xl text-[32px] leading-none md:text-[45px] mb-6 mt-0 md:mt-12">كيف يمكنني قراءة القرآن الكريم؟</h2>
+        <p class="text-lg opacity-80 mb-12 lg:mb-0">
+          <p class="text-lg text-right mb-4">يمكنك قراءة القرآن الكريم بسهولة ويسر عبر موقعنا، حيث يمكنك البدء في قراءة القرآن الكريم من أي مكان وفي أي وقت</p>
+          <p class="text-lg text-right mb-4">يمكنك البدء في قراءة القرآن الكريم من الصفحة الرئيسية، أو يمكنك البحث عن سورة معينة أو عن آية معينة</p>
+          <p class="text-lg text-right mb-4">يمكنك أيضًا البدء في تفسير القرآن الكريم، حيث يمكنك فهم الآيات والسور بشكل أفضل</p>
+          <p class="text-lg text-right mb-8">ابدأ القراءة الآن واستمتع بتلاوة القرآن الكريم</p>
+        </p>
+        <a href="#" class="bg-slate-900 place-self-end text-white btn py-2 px-6 rounded-full inline-block font-semibold uppercase tracking-wide transition duration-300">ابدأ القراءة الآن</a>
+      </div>
+      <div class="col-span-12 mt-8 lg:col-span-5 lg:col-start-8 text-center">
+        <img
+          src="OIG4 (3).jpg"
+          alt=""
+          class="h-auto max-w-full mx-auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section class="ezy__blog14_qMl0SjZP py-14 md:py-24 text-stone-800 bg-white dark:bg-[#0b1727] dark:text-white overflow-hidden">
+    <div class="container mx-auto px-8 md:px-24">
+      <div class="grid w-full">
+        <div class="col-span-1 text-right">
+          <h1 class="text-3xl md:text-[45px] leading-none font-bold">مقالاتنا الأخيرة</h1>
+        </div>
+        <div class="w-full mt-8">
+          <div class="flex flex-wrap justify-center gap-2">
+            <!-- card item 1 -->
+            <div class="w-11/12 md:w-1/2 testtt">
+              <div class="mt-6 md:mt-12 bg-gray-100 dark:bg-[#1E2735] rounded-xl overflow-hidden">
+                <div class="relative">
+                  <img src="pngtree-reading-quran-in-ramadan-image_15584798.png" alt="" class="w-full"/>
+                  <img class="absolute -bottom-6 left-6 w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_800_800/0/1715358724178?e=1721865600&v=beta&t=lGo9-9NiFTY5u0nJbOCBU7umHBY5jeMu1_8yXGIpKtE" alt=""/>
+                </div>
+                <div class="p-6 pb-8">
+                  <a href="" class="hover:text-blue-600">
+                    <h5 class="text-[19px] font-medium leading-6 mt-3 mb-3">فضائل قراءة القرآن الكريم</h5>
+                  </a>
+                  <p class="text-[17px] leading-none opacity-80 mb-5">22 أكتوبر، 2022</p>
+                  <p class="opacity-80 mb-6">قراءة القرآن الكريم لها فضائل عظيمة وتأثير إيجابي على النفس.</p>
+                  <div class="flex justify-between items-center">
+                    <a href="#" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white rounded transition text-sm py-2.5 px-6 mb-2">اقرأ المزيد</a>
+                    <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fas fa-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card item 2 -->
+            <div class="w-full md:w-1/2 testtt">
+              <div class="mt-6 md:mt-12 bg-gray-100 dark:bg-[#1E2735] rounded-xl overflow-hidden">
+                <div class="relative">
+                  <img src="pngtree-invitation-to-read-the-quran-in-ramadan-image_15572372.png" alt="" class="w-full"/>
+                  <img class="absolute -bottom-6 left-6 w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_800_800/0/1715358724178?e=1721865600&v=beta&t=lGo9-9NiFTY5u0nJbOCBU7umHBY5jeMu1_8yXGIpKtE" alt=""/>
+                </div>
+                <div class="p-6 pb-8">
+                  <a href="" class="hover:text-blue-600">
+                    <h5 class="text-[19px] font-medium leading-6 mt-3 mb-3">أهمية الصلاة في الإسلام</h5>
+                  </a>
+                  <p class="text-[17px] leading-none opacity-80 mb-5">15 سبتمبر، 2022</p>
+                  <p class="opacity-80 mb-6">الصلاة هي الركن الثاني من أركان الإسلام وأهمية المحافظة عليها.</p>
+                  <div class="flex justify-between items-center">
+                    <a href="#" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white rounded transition text-sm py-2.5 px-6 mb-2">اقرأ المزيد</a>
+                    <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fas fa-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card item 3 -->
+            <div class="w-full md:w-1/2 testtt">
+              <div class="mt-6 md:mt-12 bg-gray-100 dark:bg-[#1E2735] rounded-xl overflow-hidden">
+                <div class="relative">
+                  <img src="pngtree-read-the-quran-in-the-month-of-ramadan-image_15587711.png" alt="" class="w-full"/>
+                  <img class="absolute -bottom-6 left-6 w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_800_800/0/1715358724178?e=1721865600&v=beta&t=lGo9-9NiFTY5u0nJbOCBU7umHBY5jeMu1_8yXGIpKtE" alt=""/>
+                </div>
+                <div class="p-6 pb-8">
+                  <a href="" class="hover:text-blue-600">
+                    <h5 class="text-[19px] font-medium leading-6 mt-3 mb-3">فضائل قراءة القرآن الكريم</h5>
+                  </a>
+                  <p class="text-[17px] leading-none opacity-80 mb-5">22 أكتوبر، 2022</p>
+                  <p class="opacity-80 mb-6">قراءة القرآن الكريم لها فضائل عظيمة وتأثير إيجابي على النفس.</p>
+                  <div class="flex justify-between items-center">
+                    <a href="#" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white rounded transition text-sm py-2.5 px-6 mb-2">اقرأ المزيد</a>
+                    <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fas fa-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card item 4 -->
+            <div class="w-full md:w-1/2 testtt">
+              <div class="mt-6 md:mt-12 bg-gray-100 dark:bg-[#1E2735] rounded-xl overflow-hidden">
+                <div class="relative">
+                  <img src="pngtree-read-the-quran-in-the-month-of-ramadan-image_15587709.png" alt="" class="w-full"/>
+                  <img class="absolute -bottom-6 left-6 w-12 h-12 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGaB0vH8e5vlw/profile-displayphoto-shrink_800_800/0/1715358724178?e=1721865600&v=beta&t=lGo9-9NiFTY5u0nJbOCBU7umHBY5jeMu1_8yXGIpKtE" alt=""/>
+                </div>
+                <div class="p-6 pb-8">
+                  <a href="" class="hover:text-blue-600">
+                    <h5 class="text-[19px] font-medium leading-6 mt-3 mb-3">معنى الزكاة وأهميتها في الإسلام</h5>
+                  </a>
+                  <p class="text-[17px] leading-none opacity-80 mb-5">1 نوفمبر، 2022</p>
+                  <p class="opacity-80 mb-6">الزكاة هي الركن الثالث من أركان الإسلام وأهمية أدائها.</p>
+                  <div class="flex justify-between items-center">
+                    <a href="#" class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white rounded transition text-sm py-2.5 px-6 mb-2">اقرأ المزيد</a>
+                    <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fas fa-bookmark"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center w-full mt-12">
+            <button class="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white rounded transition py-3 px-7">اقرأ المزيد</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="pt-[60px] pb-[40px] bg-gray-100 py-14 dark:bg-[#0b1727] dark:text-white">
+    <div class="container mx-auto px-16 md:px-8 lg:px-28">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-between">
+        <div class="col-span-1 flex flex-col justify-center text-right">
+          <h2 class="font-bold text-3xl text-[32px] leading-none md:text-[45px] mb-6 mt-0">فضائل قراءة القرآن الكريم</h2>
+          <p class="text-lg opacity-80 mb-4">قراءة القرآن الكريم لها فوائد وفضائل عظيمة تشمل تحسين النفس والروح، زيادة الإيمان، والهدوء الداخلي.</p>
+        </div>
+        <div class="col-span-1 flex flex-col justify-center text-right">
+          <h2 class="font-bold text-3xl text-[32px] leading-none md:text-[45px] mb-6 mt-0">طرق تفسير القرآن الكريم</h2>
+          <p class="text-lg opacity-80 mb-4">تفسير القرآن الكريم يساعد على فهم المعاني العميقة للآيات والسور، مما يسهم في تطبيقها في الحياة اليومية.</p>
+        </div>
+        <div class="col-span-1 flex flex-col justify-center text-right">
+          <h2 class="font-bold text-3xl text-[32px] leading-none md:text-[45px] mb-6 mt-0">كيف يمكنني حفظ القرآن الكريم؟</h2>
+          <p class="text-lg opacity-80 mb-4">لحفظ القرآن الكريم بشكل فعال، ينصح بتكرار الآيات بانتظام، وتحديد أوقات مخصصة للحفظ، وطلب المساعدة من المعلمين المتخصصين.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ezy__portfolio9_2oxF4Ulm py-14 md:py-24 bg-white dark:bg-[#0b1727] text-zinc-900 dark:text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-12 gap-6 lg:gap-12">
+        <div class="col-span-12 md:col-span-4 md:mt-6 lg:mt-12 md:pt-6 lg:pt-12">
+          <div class="xl:my-12 xl:py-12">
+            <div class="mb-6 md:my-12 lg:py-12">
+              <h2 class="text-3xl leading-none md:text-[45px] mb-6">معرضنا</h2>
+              <p class="text-lg leading-8 mb-2">
+                اكتشف مجموعة من الأعمال الفنية الإسلامية المذهلة، التي تجمع بين التراث والثقافة.
+              </p>
+              <div class="col-span-12 mt-6">
+                <button class="m-1 bg-blue-600 text-white rounded px-3 py-1.5">الكل</button>
+                <button class="m-1 hover:bg-blue-600 hover:text-white rounded transition duration-300 px-3 py-1.5">
+                  خط عربي
+                </button>
+                <button class="m-1 hover:bg-blue-600 hover:text-white rounded transition duration-300 px-3 py-1.5">
+                  فن إسلامي
+                </button>
+                <button class="m-1 hover:bg-blue-600 hover:text-white rounded transition duration-300 px-3 py-1.5">
+                  زخرفة
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG1 (1).jpg"
+              alt="عمل فني إسلامي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">فن إسلامي</h5>
+              <p class="mb-0">لوحة فنية رائعة</p>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG1 (2).jpg"
+              alt="فن الخط العربي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">خط عربي</h5>
+              <p class="mb-0">كتابة بديعة</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:mt-6 md:pt-6 lg:mt-12 lg:pt-12">
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG1.i4xK.CINunN_d2.jpg"
+              alt="تصميم زخرفي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">زخرفة</h5>
+              <p class="mb-0">تصميم متقن</p>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG4 (2).jpg"
+              alt="فن إسلامي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">فن إسلامي</h5>
+              <p class="mb-0">جماليات الفن الإسلامي</p>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG1.jpg"
+              alt="تصميم زخرفي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">زخرفة</h5>
+              <p class="mb-0">فن الزخرفة الإسلامية</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-4">
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG2.jpg"
+              alt="لوحة إسلامية"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">فن إسلامي</h5>
+              <p class="mb-0">لوحة بديعة</p>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG4 (1).jpg"
+              alt="خط عربي"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">خط عربي</h5>
+              <p class="mb-0">جماليات الخط</p>
+            </div>
+          </div>
+          <div class="group rounded-xl overflow-hidden relative mt-6">
+            <img
+              src="OIG4.jpg"
+              alt="فن الزخرفة"
+              class="max-w-full h-auto w-full"
+            />
+            <div
+              class="absolute left-4 right-4 top-1/2 rounded-xl bg-white bg-opacity-70 dark:bg-black dark:bg-opacity-70 bg-blur-sm bg-saturate-200 -translate-y-1/2 opacity-0 transition duration-300 group-hover:opacity-100 text-center p-6 lg:py-12"
+            >
+              <h5 class="font-medium text-xl">زخرفة</h5>
+              <p class="mb-0">تصميم فني رائع</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="ezy__cta7_GpE0m51t py-14 md:py-24  text-white">
+    <div class="container mx-auto px-4">
+      <div class="bg-slate-900  rounded-3xl overflow-hidden md:py-6">
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 lg:col-span-8 lg:col-start-3 lg:px-12">
+            <div class="py-12 px-6 sm:px-12 text-center">
+              <h2 class="text-2xl md:text-[40px] leading-none font-bold mb-6">انضم إلينا لمزيد من المعلومات</h2>
+  
+              <div class="grid grid-cols-12 justify-center">
+                <div class="col-span-12 sm:col-span-8 sm:col-start-3">
+                  <p class="text-lg opacity-75 mb-12">
+                    من الأسهل الوصول إلى أهداف التوفير الخاصة بك عندما يكون لديك حساب التوفير المناسب.
+                  </p>
+                </div>
+              </div>
+  
+              <div>
+                <button
+                  class="text-white hover:text-black border px-7 py-3 rounded hover:bg-white sm:mr-2 transition mt-3"
+                >
+                  تعلم المزيد
+                </button>
+                <button class="text-black border px-7 py-3 rounded bg-white hover:bg-opacity-90 transition mt-3">
+                  احصل على عرض الآن
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section
+  class="ezy__copyright5_WuKmOQEs bg-white  text-zinc-900 border text-center lg:text-start py-12"
+>
+  <div class="container mx-auto px-16 md:px-8 lg:px-28">
+    <div class="grid grid-cols-12 justify-between items-center">
+      <div class="col-span-12 lg:col-span-4 flex">
+        <ul class="ezy__copyright1_WuKmOQEs-social flex">
+          <li class="m-2">
+            <a href="" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="m-2">
+            <a href="" class="hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="m-2">
+            <a href="" class="hover:text-blue-600"><i class="fab fa-pinterest"></i></a>
+          </li>
+          <li class="m-2">
+            <a href="" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-12 lg:col-span-4 lg:col-start-9 flex justify-center lg:justify-end">
+        <p class="mb-lg-0">حقوق النشر كلها محفوظة</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Add Slick Carousel JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#carousel').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        prevArrow: '<div class="slick-prev bg-gray-900">next</div>',
+        nextArrow: '<div class="slick-next">prev</i></div>',
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+    <script>
+      window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        const menuIconBars = document.querySelectorAll('.menu-icon div');
+  
+        if (window.innerWidth <= 800) {
+          if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+            menuIconBars.forEach(bar => {
+              bar.style.backgroundColor = 'black';
+            });
+          } else {
+            header.classList.remove('scrolled');
+            menuIconBars.forEach(bar => {
+              bar.style.backgroundColor = 'white'; 
+            });
+          }
+        } else {
+          if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        }
+      });
+  
+      function toggleMenu(x) {
+        x.classList.toggle("change");
+        openNav();
+      }
+  
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+  
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 800) {
+          closeNav();
+        }
+      });
+  
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.querySelector('.menu-icon').classList.remove('change');
+      }
+    </script>
+  </body>
+  </html>
+  
