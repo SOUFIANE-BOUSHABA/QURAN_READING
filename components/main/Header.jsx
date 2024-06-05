@@ -62,18 +62,24 @@ const Header = () => {
   }
 
   return (
-    <>
+   <>
       <header id="header" className="text-white py-4 sticky-header">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <div className="flex items-center">
+          <Link href="/" className="logo">
+          <div className="flex items-center cursor-pointer">
             <Image src={logo} className="w-12 h-12" alt="logo" />
             <h1 className="text-xl font-semibold ml-2">قراءة القرآن</h1>
           </div>
+          </Link>
           <nav className="desktop-menu">
             <ul className="flex space-x-6">
-              <li><Link href="/" className="hover:text-gray-300">الصفحة الرئيسية</Link></li>
+         
+              <li><Link href="/read" className="hover:text-gray-300">قراءة القرآن</Link></li>
+              <li><Link href="/listen" className="hover:text-gray-300">استمع إلى القرآن</Link></li>
               <li><Link href="/about" className="hover:text-gray-300">حول</Link></li>
               <li><Link href="/contact" className="hover:text-gray-300">اتصل بنا</Link></li>
+              
+              <li><Link href="/" className="hover:text-gray-300">الصفحة الرئيسية</Link></li>
             </ul>
           </nav>
           <div className="menu-icon" onClick={(e) => toggleMenu(e.currentTarget)}>
@@ -89,9 +95,9 @@ const Header = () => {
         <Link href="/" className="pr-4">الصفحة الرئيسية</Link>
         <Link href="/about" className="pr-4">حول</Link>
         <Link href="/contact" className="pr-4">اتصل بنا</Link>
+        <Link href="/read" className="pr-4">قراءة القرآن</Link>
+        <Link href="/listen" className="pr-4">استمع إلى القرآن</Link>
       </div>
-
-    
     </>
   );
 };
