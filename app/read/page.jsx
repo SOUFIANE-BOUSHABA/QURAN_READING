@@ -1,4 +1,4 @@
-// app/read/page.jsx:
+// app/read/page.jsx
 'use client';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -12,15 +12,16 @@ export default function Read() {
   const [allSurahs, setAllSurahs] = useState([]);
 
   useEffect(() => {
-  
     const fetchSurahs = async () => {
       try {
-        const response = await axios.get('https://api.alquran.cloud/v1/surah');
-        const surahs = response.data.data.map((surah) => ({
-          number: surah.number,
-          name: surah.name,
-          englishName: surah.englishName,
-          type: surah.revelationType,
+        const response = await axios.get('https://api.quran.com/api/v4/chapters');
+        const surahs = response.data.chapters.map((surah) => ({
+          number: surah.id,
+          name: surah.name_simple,
+          name_arabic: surah.name_arabic,
+          verses_count: surah.verses_count,
+          englishName: surah.translated_name.name,
+          type: surah.revelation_place,
         }));
         setAllSurahs(surahs);
         setFilteredSurahs(surahs);
