@@ -52,7 +52,7 @@ export default function Read() {
 
   return (
     <main className="h-full text-white w-full">
-      <div className="flex container mx-auto flex-col gap-20">
+      <div className="flex container mx-auto flex-col gap-20 z-[30]">
         <SearchFilter onSearch={setSearchTerm} onFilter={setFilter} />
         <SurahList surahs={filteredSurahs} />
       </div>
