@@ -1,11 +1,11 @@
+// components/listen/SurahList.jsx
 import React from 'react';
-import Link from 'next/link';
 
-const SurahList = ({ surahs }) => {
+const SurahList = ({ surahs, onSurahClick }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 z-[20]">
       {surahs.map((surah) => (
-        <Link key={surah.number} href={`/listen/${surah.number}`} >
+        <div key={surah.number} onClick={() => onSurahClick(surah)} className="cursor-pointer">
           <div className="p-4 border flex justify-between items-center border-gray-300 rounded hover:bg-[#2A0E61]">
             <div className="flex">
               <div className="bg-[#2A0E61] text-white rounded w-12 h-12 flex items-center justify-center mr-2">
@@ -23,7 +23,7 @@ const SurahList = ({ surahs }) => {
               </div>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </div>
   );
