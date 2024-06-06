@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   RxDiscordLogo,
   RxGithubLogo,
@@ -8,12 +9,12 @@ import {
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[20]">
+    <div className="w-full h-full bg-transparent mt-[100px] text-gray-200 shadow-lg p-[15px] z-[20]">
       <div className="w-full flex flex-col items-center justify-center m-auto z-[20]">
         <div className="w-full h-full flex flex-row items-center justify-around flex-wrap z-[20]">
           <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
             <div className="font-bold text-[16px] z-[20]">المجتمع</div>
-            <a
+            <Link
               href="https://github.com/SOUFIANE-BOUSHABA"
               target="_blank"
               rel="noopener noreferrer"
@@ -21,8 +22,8 @@ const Footer = () => {
             >
               <RxGithubLogo />
               <span className="text-[15px] ml-[6px]">Github</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://discord.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -30,11 +31,11 @@ const Footer = () => {
             >
               <RxDiscordLogo />
               <span className="text-[15px] ml-[6px]">SOUF!ANE BOUSHABA</span>
-            </a>
+            </Link>
           </div>
           <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
             <div className="font-bold text-[16px]">وسائل التواصل الاجتماعي</div>
-            <a
+            <Link
               href="https://x.com/i/flow/login?redirect_after_login=%2FSoufianBoushab3"
               target="_blank"
               rel="noopener noreferrer"
@@ -42,8 +43,8 @@ const Footer = () => {
             >
               <RxTwitterLogo />
               <span className="text-[15px] ml-[6px]">Twitter</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/in/soufian-boushaba-265600201/"
               target="_blank"
               rel="noopener noreferrer"
@@ -51,18 +52,18 @@ const Footer = () => {
             >
               <RxLinkedinLogo />
               <span className="text-[15px] ml-[6px]">LinkedIn</span>
-            </a>
+            </Link>
           </div>
           <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
             <div className="font-bold text-[16px]">حول</div>
-            <p className="flex flex-row items-center my-[15px] cursor-pointer">
+            <div className="flex flex-row items-center my-[15px] cursor-pointer">
               <span className="text-[15px] ml-[6px]">التعرف علي</span>
-            </p>
-            <p className="flex flex-row items-center my-[15px] cursor-pointer">
+            </div>
+            <div className="flex flex-row items-center my-[15px] cursor-pointer">
               <span className="text-[15px] ml-[6px]">
                 soufianboushaba12@gmail.com
               </span>
-            </p>
+            </div>
           </div>
         </div>
         <div className="mb-[20px] text-[15px] text-center">
