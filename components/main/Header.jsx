@@ -6,13 +6,12 @@ import '../../styles/header.css';
 import logo from '../../public/logo.png';
 
 const Header = () => {
-
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById('header');
       const menuIconBars = document.querySelectorAll('.menu-icon div');
 
-      if (typeof window !== 'undefined' && window.innerWidth <= 800) {
+      if (window.innerWidth <= 800) {
         if (window.scrollY > 100) {
           header.classList.add('scrolled');
           menuIconBars.forEach(bar => {
@@ -38,32 +37,28 @@ const Header = () => {
       document.querySelector('.menu-icon').classList.remove('change');
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      window.addEventListener('resize', closeNav);
-    }
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', closeNav);
 
     return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('resize', closeNav);
-      }
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', closeNav);
     };
   }, []);
 
   const toggleMenu = (x) => {
     x.classList.toggle("change");
     openNav();
-  }
+  };
 
   const openNav = () => {
     document.getElementById("mySidepanel").style.width = "250px";
-  }
+  };
 
   const closeNav = () => {
     document.getElementById("mySidepanel").style.width = "0";
     document.querySelector('.menu-icon').classList.remove('change');
-  }
+  };
 
   return (
     <>
@@ -93,7 +88,7 @@ const Header = () => {
       </header>
 
       <div id="mySidepanel" className="sidepanel grid">
-        <button className="closebtn" onClick={closeNav}>×</button>
+        <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
         <Link href="/" className="pr-4">الصفحة الرئيسية</Link>
         <Link href="/about" className="pr-4">حول</Link>
         <Link href="/contact" className="pr-4">اتصل بنا</Link>
