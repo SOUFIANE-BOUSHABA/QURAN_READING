@@ -22,8 +22,8 @@ const SearchFilter = ({ onSearch, onFilter }) => {
         onChange={(e) => onFilter(e.target.value)} 
         className="p-2 shadow-lg border-2 border-[#2A0E61] rounded h-10 w-96 text-right bg-transparent text-white">
         <option value="" className="bg-gray-800">الكل</option>
-        <option value="Meccan" className="bg-gray-800">السور المكية</option>
-        <option value="Medinan" className="bg-gray-800">السور المدنية</option>
+        <option value="makkah" className="bg-gray-800">السور المكية</option>
+        <option value="madinah" className="bg-gray-800">السور المدنية</option>
       </select>
     </div>
   );

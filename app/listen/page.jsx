@@ -25,7 +25,7 @@ export default function Listen() {
           name_arabic: surah.name_arabic,
           verses_count: surah.verses_count,
           englishName: surah.translated_name.name,
-          type: surah.revelation_place,
+          type: surah.revelation_place.toLowerCase(), 
         }));
         setAllSurahs(surahs);
         setFilteredSurahs(surahs);
@@ -48,7 +48,7 @@ export default function Listen() {
     }
 
     if (filter) {
-      filtered = filtered.filter((surah) => surah.type.toLowerCase() === filter.toLowerCase());
+      filtered = filtered.filter((surah) => surah.type === filter.toLowerCase());
     }
 
     setFilteredSurahs(filtered);
