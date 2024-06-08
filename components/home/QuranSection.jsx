@@ -1,13 +1,18 @@
-'use client';
-import React, { useEffect } from 'react';
+'use client'; 
+
+import { useEffect } from 'react';
 import Image from 'next/image';
 import '../../styles/quran.css';
+import $ from 'jquery';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel';
 
 const QuranSection = () => {
   useEffect(() => {
     const loadSlick = () => {
-      if (typeof window !== 'undefined' && window.$) {
-        window.$('#carousel').slick({
+      if ($('#carousel').length) {
+        $('#carousel').slick({
           slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: true,
@@ -42,7 +47,9 @@ const QuranSection = () => {
       }
     };
 
-    loadSlick();
+    if (typeof window !== 'undefined') {
+      $(document).ready(loadSlick);
+    }
   }, []);
 
   return (
