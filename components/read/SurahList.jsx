@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const SurahList = ({ surahs }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 z-[20]">
+    <div className="grid grid-cols-1 px-4 md:grid-cols-3 gap-4 z-[20]">
       {surahs.map((surah) => (
         <Link key={surah.number} href={`/read/${surah.number}`} >
           <div className="p-4 border flex justify-between items-center border-gray-300 rounded hover:bg-[#2A0E61]">

@@ -10,7 +10,7 @@ const SearchFilter = ({ onSearch, onFilter }) => {
   };
 
   return (
-    <div className="flex container mx-auto  gap-4 justify-end mb-4 mt-8 z-[20]">
+    <div className="flex container px-4 mx-auto  gap-4 justify-end mb-4 mt-8 z-[20]">
       <input
         type="text"
         placeholder="ابحث عن سورة..."
