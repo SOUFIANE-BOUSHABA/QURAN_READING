@@ -17,7 +17,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row sectionn items-center justify-center px-20 mt-40 w-full z-[20]"
+      className="flex flex-row sectionn items-center justify-center px-8 mt-40 w-full z-[20]"
       dir="rtl" // Added to support right-to-left text direction
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-end">
