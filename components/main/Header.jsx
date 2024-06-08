@@ -87,7 +87,7 @@ const Header = () => {
         </div>
       </header>
 
-      <div id="mySidepanel" className="sidepanel grid">
+      <div id="mySidepanel" className="sidepanel text-white grid">
       <a href="#" className="closebtn" onClick={closeNav}>×</a>
 
         <Link href="/" className="pr-4">الصفحة الرئيسية</Link>
